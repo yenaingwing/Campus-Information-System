@@ -23,7 +23,7 @@ Campus Information System/
 │   ├── Room.php            # Room allocation & details
 │   └── Search.php          # Global search functionality
 │
-├── 📁 Public / Pages & Views
+├── 
 │   ├── index.php / aboutus.php # Main landing and information pages
 │   ├── canteen1.html       # Campus dining / canteen directory
 │   ├── adminpage.php       # Administrative dashboard interface
@@ -34,14 +34,14 @@ Campus Information System/
 │   ├── deletebuilding.php  # Building removal handler
 │   └── deleteDepartment.php# Department removal handler
 │
-├── 📁 Assets & Styling
+├── 
 │   ├── admin.css / de.css  # Administrative & general stylesheets
 │   ├── campus-nav.css      # Navigation specific styling
 │   ├── admin.js / app.js   # Frontend interactivity & scripts
 │   ├── campus-nav.js       # Navigation control scripts
 │   └── *.jpg               # Campus imagery & background visuals
 │
-└── 📁 Configuration & Database
+└── 
     ├── bootstrap.php       # Application bootstrapping & autoloading
     ├── connection.php      # Database connection parameters
     ├── dbcon.php / db_conn.php # Database driver helpers
