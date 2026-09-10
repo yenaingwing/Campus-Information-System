@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Map | UCSM</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <style>
+        .legacy-map-page {
+            width: min(1400px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: 100px 0 35px;
+            text-align: center;
+        }
+
+        .legacy-map-page h1 {
+            margin: 0 0 20px;
+            font-size: clamp(1.6rem, 3vw, 2.3rem);
+        }
+
+        .legacy-map-page iframe {
+            display: block;
+            width: 100%;
+            height: min(70vh, 650px);
+            min-height: 420px;
+            border: 0;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        @media (max-width: 600px) {
+            .legacy-map-page {
+                width: calc(100% - 18px);
+                padding-top: 84px;
+            }
+
+            .legacy-map-page iframe {
+                height: 60vh;
+                min-height: 360px;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Primary navigation">
+    <div class="nav-bar">
+        <a class="nav-logo" href="index.html" aria-label="UCSM Home">
+            <img src="IMG/ucsm1.png" alt="UCSM logo">
+            <span>UCSM</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+            <i class="bx bx-menu" aria-hidden="true"></i>
+        </button>
+        <div class="nav-menu">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="info.html">Campus Information</a>
+            <a class="nav-link" href="map.html">Map</a>
+            <a class="nav-link" href="aboutus.php">About Us</a>
+            <button class="dark-light" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+                <i class="bx bx-moon moon" aria-hidden="true"></i>
+                <i class="bx bx-sun sun" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<main class="legacy-map-page">
+    <h1>Campus Map of UCSM</h1>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d17152.458917232078!2d96.1819876853648!3d22.125986884768867!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30cb427795555555%3A0x43d0104d46b79bfc!2z4YCZ4YCU4YC54YCQ4YCc4YCx4YC44YCA4YC94YCU4YC64YCV4YC74YCC4YCw4YCQ4YCs4YCQ4YCA4YC54YCA4YCe4YCt4YCv4YCc4YC6!5e0!3m2!1smy!2smm!4v1704705622481!5m2!1smy!2smm" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="UCSM campus map"></iframe>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

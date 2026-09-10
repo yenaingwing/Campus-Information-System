@@ -1,0 +1,3 @@
+<?php
+declare(strict_types=1); require __DIR__.'/includes/auth_guard.php';
+if($_SERVER['REQUEST_METHOD']!=='POST'||!verify_csrf($_POST['csrf_token']??null)){http_response_code(400);flash('danger','Invalid delete request.');redirect('new_buildingAdmin.php');}$id=filter_var($_POST['id']??null,FILTER_VALIDATE_INT);if(!$id||$id<1){flash('danger','Invalid room ID.');redirect('new_buildingAdmin.php');}try{$roomModel->delete($id);flash('success','Room and associated department records were deleted.');}catch(Throwable $e){error_log($e->getMessage());flash('danger','The room could not be deleted.');}redirect('new_buildingAdmin.php');

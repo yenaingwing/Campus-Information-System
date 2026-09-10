@@ -1,0 +1,151 @@
+/* Secondary navigation for campus/information pages.
+   Kept separate from the primary website navigation. */
+.campus-secondary-nav {
+    position: relative;
+    z-index: 10000;
+    margin-top: 0;
+    width: 100%;
+    background: var(--nav-bg, #fff);
+    border-bottom: 1px solid var(--border, #e5e7eb);
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+
+.campus-nav-inner {
+    width: min(1400px, calc(100% - 32px));
+    min-height: 52px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.campus-nav-links {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+.campus-nav-links a {
+    min-height: 52px;
+    padding: 0 14px;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--nav-text, #1f2937);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.25;
+    border-bottom: 3px solid transparent;
+    transition: color .2s ease, background-color .2s ease, border-color .2s ease;
+}
+
+.campus-nav-links a:hover,
+.campus-nav-links a:focus-visible {
+    color: var(--nav-hover, #2563eb);
+    background: rgba(37,99,235,.07);
+    outline: none;
+}
+
+.campus-nav-links a.active {
+    color: var(--nav-hover, #2563eb);
+    border-bottom-color: var(--nav-hover, #2563eb);
+    background: rgba(37,99,235,.05);
+}
+
+.campus-nav-toggle {
+    display: none;
+}
+
+body.dark .campus-secondary-nav {
+    box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+
+@media (max-width: 900px) {
+    .campus-secondary-nav {
+        margin-top: 0;
+    }
+
+    .campus-nav-inner {
+        width: 100%;
+        display: block;
+    }
+
+    .campus-nav-toggle {
+        min-height: 52px;
+        width: 100%;
+        padding: 0 18px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--nav-text, #1f2937);
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 700;
+        background: transparent;
+    }
+
+    .campus-nav-toggle:focus-visible {
+        outline: 2px solid var(--nav-hover, #2563eb);
+        outline-offset: -2px;
+    }
+
+    .campus-nav-chevron {
+        font-size: 22px;
+        line-height: 1;
+        transition: transform .2s ease;
+    }
+
+    .campus-secondary-nav.open .campus-nav-chevron {
+        transform: rotate(180deg);
+    }
+
+    .campus-nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        max-height: min(60vh, 430px);
+        overflow-y: auto;
+        border-top: 1px solid var(--border, #e5e7eb);
+    }
+
+    .campus-secondary-nav.open .campus-nav-links {
+        display: flex;
+    }
+
+    .campus-nav-links a {
+        width: 100%;
+        min-height: 48px;
+        justify-content: flex-start;
+        padding: 10px 18px;
+        border-bottom: 1px solid var(--border, #e5e7eb);
+    }
+
+    .campus-nav-links a.active {
+        border-left: 4px solid var(--nav-hover, #2563eb);
+        border-bottom-color: var(--border, #e5e7eb);
+        padding-left: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .campus-nav-toggle {
+        min-height: 48px;
+        padding: 0 14px;
+    }
+
+    .campus-nav-links a {
+        min-height: 46px;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .campus-nav-links a.active {
+        padding-left: 10px;
+    }
+}

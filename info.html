@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Campus facilities and information at the University of Computer Studies, Mandalay.">
+    <title>Campus Information | UCSM</title>
+
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="info.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+<nav class="site-nav" aria-label="Primary navigation">
+    <div class="nav-bar">
+        <a class="nav-logo" href="index.html" aria-label="UCSM Home">
+            <img src="IMG/ucsm1.png" alt="UCSM logo">
+            <span>UCSM</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+            <i class="bx bx-menu" aria-hidden="true"></i>
+        </button>
+
+        <div class="nav-menu">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="info.html">Campus Information</a>
+            <a class="nav-link" href="map.html">Map</a>
+            <a class="nav-link" href="aboutus.php">About Us</a>
+
+            <button class="dark-light" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+                <i class="bx bx-moon moon" aria-hidden="true"></i>
+                <i class="bx bx-sun sun" aria-hidden="true"></i>
+            </button>
+
+            <div class="search-container">
+                <button class="searchToggle" type="button" aria-label="Open search" aria-expanded="false">
+                    <i class="bx bx-search search" aria-hidden="true"></i>
+                    <i class="bx bx-x cancel" aria-hidden="true"></i>
+                </button>
+                <form class="search-field" action="se.php" method="get" role="search">
+                    <input type="search" name="q" placeholder="Search campus information..." aria-label="Search campus information" autocomplete="off" required>
+                    <button type="submit" aria-label="Submit search">
+                        <i class="bx bx-search" aria-hidden="true"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>
+<main class="container" aria-label="Campus facilities">
+    <div class="slide">
+        <article class="item active" style="background-image:url('IMG/sport.jpg')">
+            <div class="content">
+                <div class="name">Sport Hall</div>
+                <div class="des">A campus facility supporting sports, recreation, and student activities.</div>
+                <a href="sporthall.html"><button type="button">See More</button></a>
+            </div>
+        </article>
+
+        <article class="item" style="background-image:url('IMG/mainbuilding.jpg')">
+            <div class="content">
+                <div class="name">Main Building</div>
+                <div class="des">The central academic and administrative hub of the University of Computer Studies, Mandalay.</div>
+                <a href="mainbuild.html"><button type="button">See More</button></a>
+            </div>
+        </article>
+
+        <article class="item" style="background-image:url('IMG/parking.jpg')">
+            <div class="content">
+                <div class="name">Parking Area</div>
+                <div class="des">A designated area providing convenient parking for members and visitors of the university community.</div>
+                <a href="parkingplace.html"><button type="button">See More</button></a>
+            </div>
+        </article>
+
+        <article class="item" style="background-image:url('IMG/male2.jpg')">
+            <div class="content">
+                <div class="name">Male Dormitory</div>
+                <div class="des">Residential facilities supporting students during their academic life at UCSM.</div>
+                <a href="maledormitory.html"><button type="button">See More</button></a>
+            </div>
+        </article>
+
+        <article class="item" style="background-image:url('IMG/fm1.jpg')">
+            <div class="content">
+                <div class="name">Female Dormitory</div>
+                <div class="des">Residential accommodation designed to support students in a safe and convenient environment.</div>
+                <a href="femaledormitory.html"><button type="button">See More</button></a>
+            </div>
+        </article>
+
+        <article class="item" style="background-image:url('IMG/phylabA.jpg')">
+            <div class="content">
+                <div class="name">Laboratory</div>
+                <div class="des">Laboratory facilities where students develop practical skills through experiments and technical activities.</div>
+                <a href="laboratory.html"><button type="button">See More</button></a>
+            </div>
+        </article>
+
+        <article class="item" style="background-image:url('IMG/canteen.jpg')">
+            <div class="content">
+                <div class="name">Canteen</div>
+                <div class="des">Campus dining facilities serving students, faculty, staff, and visitors.</div>
+                <a href="canteen1.html"><button type="button">See More</button></a>
+            </div>
+        </article>
+    </div>
+
+    <div class="button" aria-label="Slider controls">
+        <button class="prev" type="button" aria-label="Previous facility">
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+        </button>
+        <button class="next" type="button" aria-label="Next facility">
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </button>
+    </div>
+</main>
+
+<script src="app.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

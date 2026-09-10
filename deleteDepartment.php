@@ -1,0 +1,3 @@
+<?php
+declare(strict_types=1); require __DIR__.'/includes/auth_guard.php';
+if($_SERVER['REQUEST_METHOD']!=='POST'||!verify_csrf($_POST['csrf_token']??null)){http_response_code(400);flash('danger','Invalid delete request.');redirect('new_DepartmentAdmin.php');}$id=filter_var($_POST['id']??null,FILTER_VALIDATE_INT);if(!$id||$id<1){flash('danger','Invalid department ID.');redirect('new_DepartmentAdmin.php');}try{$departmentModel->delete($id);flash('success','Department deleted successfully.');}catch(Throwable $e){error_log($e->getMessage());flash('danger','The department could not be deleted.');}redirect('new_DepartmentAdmin.php');
